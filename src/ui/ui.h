@@ -29,6 +29,7 @@ struct UI {
     struct UIDebug debug;
 };
 
+extern struct UIComponent crosshair_init(struct UICrosshair *self);
 extern struct UIComponent hotbar_init(struct UIHotbar *self);
 extern struct UIComponent debug_init(struct UIDebug *self);
 
@@ -41,7 +42,7 @@ extern struct UIComponent debug_init(struct UIDebug *self);
 static inline void ui_init(struct UI *self) {
     _UI_COMPONENT(struct UIHotbar, hotbar, hotbar);
     _UI_COMPONENT(struct UICrosshair, crosshair, crosshair);
-    _UI_COMPONENT(struct UICrosshair, crosshair, crosshair);
+    _UI_COMPONENT(struct UIDebug, debug, debug);
 }
 
 void ui_destroy(struct UI *self);

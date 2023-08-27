@@ -164,7 +164,7 @@ bool ecs_has(struct Entity entity, enum ECSComponent component) {
     return ECS_TAG(ECSCL_GET(&entity.ecs->lists[component], entity.index)) & ECS_TAG_USED;
 }
 
-void *ecs_get(struct Entity entity, enum ECSComponent component) {
+vec3s *ecs_get(struct Entity entity, enum ECSComponent component) {
     assert(ecs_has(entity, component));
     return ECSCL_GET(&entity.ecs->lists[component], entity.index);
 }

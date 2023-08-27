@@ -1,12 +1,8 @@
 #include "gfx/window.h"
 #include "gfx/gfx.h"
-#include <freetype/freetype.h>
 
 #include "state.h"
 #include "block/block.h"
-
-// TODO: remove these
-#include "world/light.h"
 
 // global state
 struct State state;
@@ -55,6 +51,7 @@ void init() {
 
     state.world.entity_load = player;
     state.world.entity_view = player;
+    state.player = player;
 }
 
 void destroy() {
@@ -90,6 +87,11 @@ void update() {
     // wireframe toggle (T)
     if (state.window->keyboard.keys[GLFW_KEY_T].pressed) {
         state.renderer.flags.wireframe = !state.renderer.flags.wireframe;
+    }
+
+    // debug toggle (F3)
+    if (state.window->keyboard.keys[GLFW_KEY_F3].pressed) {
+        state.ui.debug.enabled = !state.ui.debug.enabled;
     }
 
     // mouse toggle (ESC)

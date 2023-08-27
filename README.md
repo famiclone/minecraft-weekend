@@ -1,10 +1,10 @@
-# Minecraft, but I made it in 48 hours*
-
-\* I've actually updated it since - [see this commit for the 48 hour version](https://github.com/jdah/minecraft-weekend/tree/cb19738305804b5734faa7118c1c784f26ff9463).
+# minecraft-weekend
+It's a fork of [jdah/minecraft-weekend](https://github.com/jdah/minecraft-weekend).
 
 ![screenshot](screenshots/1.png)
 
-#### Features:
+
+### Features:
 - Infinite, procedurally generated world
 - Infinite height/depth
 - Day/night cycle
@@ -18,9 +18,9 @@
 - A whole lot of different block types
 - More
 
-#### Building
+### Building
 
-##### Unix-like
+#### Unix-like
 `$ git clone --recurse-submodules https://github.com/jdah/minecraft-weekend.git`\
 `$ git config --local submodule.lib/cglm.ignore all`\
 `$ make`
@@ -40,6 +40,6 @@ The game binary, once built with `$ make`, can be found in `./bin/`.
 *Be sure* to run with `$ ./bin/game` out of the root directory of the repository.
 If you are getting "cannot open file" errors (such as "cannot find ./res/shaders/*.vs"), this is the issue. 
 
-##### Windows
+#### Windows
 
 good luck 🤷‍♂️ probably try building under WSL and using an X environment to pass graphics through.

@@ -1,6 +1,7 @@
 #ifndef STATE_H
 #define STATE_H
 
+#include "entity/ecstypes.h"
 #include "gfx/gfx.h"
 #include "gfx/renderer.h"
 #include "gfx/window.h"
@@ -14,6 +15,7 @@ struct State {
     struct Renderer renderer;
     struct World world;
     struct UI ui;
+    struct Entity player;
     size_t ticks;
 };
 

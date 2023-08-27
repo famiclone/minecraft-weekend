@@ -65,7 +65,7 @@ struct Entity ecs_new(struct ECS *self);
 void ecs_delete(struct ECS *self, struct Entity entity);
 void ecs_remove(struct Entity entity, enum ECSComponent component);
 bool ecs_has(struct Entity entity, enum ECSComponent component);
-void *ecs_get(struct Entity entity, enum ECSComponent component);
+vec3s *ecs_get(struct Entity entity, enum ECSComponent component);
 void ecs_init(struct ECS *self, struct World *world);
 void ecs_destroy(struct ECS *self);
 
